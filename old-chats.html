@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>JA-Mystic</title>
+	<link rel="icon" type="image/x-icon" href="images/icon.ico">
+</head>
+<style>
+    .oldchatbutton {
+  padding: 1.6em 7em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-top: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.oldchatbutton:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.oldchatbutton:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+</style>
+<body>
+    
+    <header>
+        <center>
+            <div class="dropdown">
+                <img src="images/logo.png" class="logo">
+                <div class="dropdown-content">
+                    <a href="chat.html">Chat</a>
+                  <a href="about.html">About</a>
+                  <a href="bts.html">Behind the Scenes</a>
+                  <a>Old chats</a>
+                  <a href="htmlform.html">No CSS</a>
+                  <a href="#">Images</a>
+                </div>
+              </div>
+                <div id="randomDiv" class="hidden">
+                    <p class="reminder">Jerk off!!! i mean vitamins</p>
+                    <audio id="music" src="reminder.mp3" preload="auto"></audio>
+                </div>
+        </center>
+
+       
+    
+    <audio id="sound">
+        <source src="notification.mp3" type="audio/mpeg">
+    </audio>
+    <center>
+    </header>
+    <h1>Download your old chat database here:-</h1>
+    <a href="oldchats/0.mhtml"><button class="oldchatbutton">CHAT 0</button></a><br><br>
+    <a href="oldchats/1.mhtml"><button class="oldchatbutton">CHAT 1</button></a><br><br>
+    <a href="oldchats/2.mhtml"><button class="oldchatbutton">CHAT 2</button></a><br><br>
+    <a href="oldchats/3.mhtml"><button class="oldchatbutton">CHAT 3</button></a><br><br>
+    <a href="oldchats/4.mhtml"><button class="oldchatbutton">CHAT 4</button></a><br><br>
+    <a href="oldchats/5.mhtml"><button class="oldchatbutton">CHAT 5</button></a><br><br>
+    <a href="oldchats/6.mhtml"><button class="oldchatbutton">CHAT 6</button></a><br><br>
+    <a href="oldchats/7.mhtml"><button class="oldchatbutton">CHAT 7</button></a><br><br>
+    <a href="oldchats/8.mhtml"><button class="oldchatbutton">CHAT 8</button></a><br><br>
+    <a href="oldchats/9.mhtml"><button class="oldchatbutton">CHAT 9</button></a><br><br>
+    <a href="oldchats/10.mhtml"><button class="oldchatbutton">CHAT 10</button></a><br><br>
+    <a href="oldchats/11.mhtml"><button class="oldchatbutton">CHAT FIGHT 11</button></a><br><br>
+    </center>
+    
+    
+</body>
+<script src="js/reminder.js"></script>
+</html>

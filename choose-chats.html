@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>JA-Mystic</title>
+	<link rel="icon" type="image/x-icon" href="images/icon.ico">
+</head>
+<style>
+    #chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        a { /* Use the default text color of the parent element */
+            text-decoration: none;
+            color: #000000;
+        }
+        .contact {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: inherit; /* Use the default text color of the parent element */
+            text-decoration: none;
+        }
+
+        .contact:hover {
+            background-color: rgb(191, 94, 151);
+        }
+
+        .messages {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            background-color: #8a2cb9;
+            color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+</style>
+<body>
+    
+    <header> 
+        <div class="user-name"><h1 id="nameDisplay" ></h1></div>
+        <center>
+            <div class="dropdown">
+                
+                <img src="images/logo.png" class="logo">
+                <div class="dropdown-content">
+                    <a>Chat</a>
+                  <a href="send-image/images.html" target="_blank">Images</a>
+                </div>
+              </div>
+        </center>
+    </header>
+    <br>
+    <div id="chat-container">
+        <h2>Chat</h2>
+        <a href="users/jk1000/RsInchALeNeBurCiOnADOXYGMateRANt.html"><div class="contact" ><h4>Aravind</h4></div></a>
+        <a href="ERATeRsOUsIgIOnic.html"><div class="contact"><h4>Tanay</h4></div></a>
+        <div class="messages" id="chat-messages">
+            <center><a href="index.html"><p>Sign out</p></a></center>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="js/reminder.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/call.js"></script>
+  <script src="js/rightclick.js"></script>
+</html>

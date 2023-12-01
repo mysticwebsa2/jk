@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    background-color: #0f0f0f;
+    font-family: 'Cabin', sans-serif;
+}
+
+.logo {
+    width: 150px;
+    transition: 0.25s;
+    margin: 8px 23px 72px;
+}
+.sidebar {
+    width: 250px;
+    background-color: #212121;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: width 0.3s; /* Add smooth transition for sidebar width */
+}
+.sidebar h1 {
+    margin-top: -3px;
+}
+.contact {
+    background-color: #303749;
+}
+.contact:hover {
+    background-color: #383f56;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+.sidebar.collapsed {
+    width: 0;
+}
+
+.sidebar .contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.sidebar .contact img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sidebar .contact span {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+.sidebar .contact span:active {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #212121;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-profile {
+    display: flex;
+    align-items: center;
+}
+
+.contact-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.popup-content img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.messages {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.outer{
+    width:100%;
+    margin-top:5px;
+    display:flex;
+    animation: fadeIn 0.22s;
+}
+#inner{
+    max-width: 80%;
+    font-size: 18px;
+    padding:11px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.516);
+    animation: slideIn 0.22s;
+    
+    
+    
+}
+.me{
+    background-color: #766ac8;
+    color:#fff;
+    max-width: 80%;
+    font-size: 18px;
+    padding:11px;
+    box-sizing: border-box;
+    box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.516);
+    animation: slideIn 0.22s;
+    
+     
+}
+.notMe{
+    border-radius: 20px;
+    background:#212121;
+    color:#fff;
+    max-width: 80%;
+    font-size: 18px;
+    padding:11px;
+    box-sizing: border-box;
+    box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.516);
+    animation: slideIn 0.22s;
+}
+#dltMsg {
+    border-radius: 50px;
+    float: right;
+    margin-left: 30px;
+    margin-top: 5px;
+    font-size: 8px;
+    background-color: #292929;
+    border-color: transparent;
+    color: #fff;
+    transition: 0.15s;
+}
+#dltMsg:hover {
+    border-radius: 50px;
+    float: right;
+    margin-left: 30px;
+    margin-top: 5px;
+    font-size: 9px;
+    background-color: #921717;
+    border-color: transparent;
+    color: #fff;
+}
+.signout {
+    color: #939393;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+}
+.nameuser {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.type {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    background-color: #0f0f0f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+.messagetext {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #212121;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.sendbutton {
+    padding: 10px;
+    background-color: #4a546f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.myname {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+div.contact span {
+    text-decoration: none;
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.collapsed {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #128C7E;
+        z-index: 1;
+    }
+
+    .sidebar.collapsed .contact {
+        display: block;
+        text-align: center;
+        padding: 15px;
+    }
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 2;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 3;
+}
+
+.popup-content {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .popup {
+        width: 80%;
+        max-width: 300px;
+    }
+}

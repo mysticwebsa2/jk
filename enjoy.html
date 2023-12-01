@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wrong password! MYSTIC</title>
+</head>
+<style>
+
+#fullscreen-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/rick.gif') no-repeat center center fixed;
+    z-index: -1;
+}
+.intro {
+    margin: 0;
+   position: absolute;
+   top: 50%;  left: 50%;
+   width: 100px;
+   transform: translate(-50%, -50%);
+ }   
+</style>
+<body onload="show();">
+    <div id = "myDiv">
+        <div>
+            <img id = "myImage" src = "images/logo.png" class="intro">
+        </div>
+    </div>
+    <div id="content" style="display: none;">
+    <img src="images/logo.png" alt="JA-Mystic" width="100px">
+    <center><h1>You entered the wrong password!!</h1>
+    <a href="index.html"><button>Retry</button></a>
+    </center>
+
+    <audio id="audio" autoplay loop>
+        
+        <source src="rick.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="fullscreen-bg"></div>
+</body>
+
+<script>
+    function show() {
+    document.getElementById("myDiv").style.display="block";
+    setTimeout("hide()", 1000); // 1 wait, change the delay here
+}
+
+function hide() {
+    document.getElementById("myDiv").style.display="none";
+    document.getElementById("content").style.display="block";
+}
+</script>
+</html>
