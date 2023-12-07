@@ -279,6 +279,20 @@ div.contact span {
     font-size: 20px;
     cursor: pointer;
 }
+.media {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #128C7E;
+    border-radius: 10px;
+    transition: 0.21s;
+}
+.media:hover {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(140, 67, 18);
+    border-radius: 10px;
+}
+
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {

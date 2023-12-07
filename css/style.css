@@ -315,6 +315,19 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+.media {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #128C7E;
+    border-radius: 10px;
+    transition: 0.21s;
+}
+.media:hover {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(140, 67, 18);
+    border-radius: 10px;
+}
 /* Style for the image in the modal */
 #modalImage {
     cursor: pointer;
