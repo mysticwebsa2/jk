@@ -161,7 +161,7 @@ module.sendMsg = function sendMsg() {
 // TO RECEIVE MSG
 onChildAdded(ref(db, "messages"), (data) => {
     if (data.val().sender == sender) {
-        messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMsg(" + data.key + ")>X</button></div></div>";
+        messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMs(" + data.key + ")>X</button></div></div>";
     } else {
         messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <b class=nameuser>" + data.val().sender + ":</b><br>" + processMessage(data.val().msg) + "</div></div>";
     }
@@ -239,17 +239,16 @@ function sortMessagesByTimestamp(messages) {
     return messages.sort((a, b) => a.timestamp - b.timestamp);
 }
 // WHEN MSG IS DELETED
-//onChildRemoved(ref(db, "messages"), (data) => {
- //   var msgBox = document.getElementById(data.key);
- //   messages.removeChild(msgBox);
-//});
+onChildRemoved(ref(db, "messages"), (data) => {
+   var msgBox = document.getElementById(data.key);
+   messages.removeChild(msgBox);
+});
 
 
-// TO DELETE MSG
-//module.dltMsg = function dltMsg(key){
-  //  remove(ref(db,"messages/"+key));
-//}
-
+//TO DELETE MSG
+module.dltMsg = function dltMsg(key){
+ remove(ref(db,"messages/"+key));
+}
 
       </script>
 </body>
