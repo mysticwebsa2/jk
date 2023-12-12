@@ -237,22 +237,17 @@ function sortMessagesByTimestamp(messages) {
     return messages.sort((a, b) => a.timestamp - b.timestamp);
 }
 // WHEN MSG IS DELETED
-onChildRemoved(ref(db, "messages"), (data) => {
-    var msgBox = document.getElementById(data.key);
-    messages.removeChild(msgBox);
-});
+//onChildRemoved(ref(db, "messages"), (data) => {
+ //   var msgBox = document.getElementById(data.key);
+ //   messages.removeChild(msgBox);
+//});
 
 
 // TO DELETE MSG
-module.dltMsg = function dltMsg(key){
-    remove(ref(db,"messages/"+key));
-}
+//module.dltMsg = function dltMsg(key){
+  //  remove(ref(db,"messages/"+key));
+//}
 
-// WHEN MSG IS DELETED
-onChildRemoved(ref(db,"messages"),(data)=>{
-    var msgBox = document.getElementById(data.key);
-    messages.removeChild(msgBox);
-})
       </script>
       <script>
         function toggleSidebar() {
