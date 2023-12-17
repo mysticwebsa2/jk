@@ -4,6 +4,9 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
 }
+b {
+    font-weight: 800; /* You can adjust this value to make it bolder */
+  }
 .intro {
     margin: 0;
    position: absolute;

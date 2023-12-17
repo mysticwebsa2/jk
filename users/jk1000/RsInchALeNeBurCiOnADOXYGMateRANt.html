@@ -251,6 +251,15 @@ module.dltMsg = function dltMsg(key){
 }
 
       </script>
+      <script>
+        document.addEventListener('copy', function (e) {
+            var selectedText = window.getSelection().toString();
+            var formattedText = "<b>" + selectedText + "</b> -- ";
+            e.clipboardData.setData('text/html', formattedText);
+            e.clipboardData.setData('text/plain', formattedText);
+            e.preventDefault();
+        });
+    </script>
 </body>
 <script src="../../js/loading.js"></script>
 <script src="../../js/reminde.js"></script>
