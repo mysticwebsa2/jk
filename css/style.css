@@ -1,10 +1,11 @@
 body {
     background-image: url(../images/bg.jpg);
     margin: 0;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Golos Text', sans-serif;
 }
-b {
+reply {
     font-weight: 800; /* You can adjust this value to make it bolder */
+    font-family: 'Lato', sans-serif;
   }
 .intro {
     margin: 0;

@@ -1,10 +1,11 @@
 body {
     margin: 0;
     background-color: #0f0f0f;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Golos Text', sans-serif;
 }
-b {
+reply {
     font-weight: 800; /* You can adjust this value to make it bolder */
+    font-family: 'Lato', sans-serif;
   }
 .logo {
     width: 150px;

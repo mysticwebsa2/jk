@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../../images/icon.ico">
     <title>Arava | Mystic</title>
 </head>
@@ -162,7 +168,7 @@ onChildAdded(ref(db, "messages"), (data) => {
     if (data.val().sender == sender) {
         messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMs(" + data.key + ")>X</button></div></div>";
     } else {
-        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <b class=nameuser>" + data.val().sender + ":</b><br>" + processMessage(data.val().msg) + "</div></div>";
+        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <div class=nameuser>" + data.val().sender + ":</div><br>" + processMessage(data.val().msg) + "</div></div>";
     }
 
     // Scroll down to the new message
@@ -270,7 +276,7 @@ function closeSidebar() {
 <script>
     document.addEventListener('copy', function (e) {
         var selectedText = window.getSelection().toString();
-        var formattedText = "<b>" + selectedText + "</b> -- ";
+        var formattedText = "<reply>" + selectedText + "</reply> -- ";
         e.clipboardData.setData('text/html', formattedText);
         e.clipboardData.setData('text/plain', formattedText);
         e.preventDefault();
