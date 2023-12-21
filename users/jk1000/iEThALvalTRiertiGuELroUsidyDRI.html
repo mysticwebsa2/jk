@@ -3,96 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../../images/icon.ico">
-    <title>Arava | Mystic</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<title>YOUR HUSSY</title>
+	<link rel="icon" type="image/x-icon" href="../../images/icon.ico">
 </head>
+<style>
+    .image-container {
+        max-width: 100%;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+   
+</style>
 <body>
-    <body>
-        <div class="container">
-            <div class="sidebar">
-                <img src="../../images/logonew.png" alt="Ja-Mystic" class="logo">
-                <!-- Sidebar contacts -->
-                <h1>Chats</h1>
-                <a href="RsInchALeNeBurCiOnADOXYGMateRANt.html">
-                    <div class="contact" id="contact1" style="background-color: #766ac8;">
-                        <img src="../../images/pfp/jaita.jpeg" alt="Profile Picture">
-                        <span>Jaita</span>
-                    </div>
-                </a>
-                <a href="iEThALvalTRiertiGuELroUsidyDRI.html">
-                    <div class="contact" id="contact2">
-                        <img src="../../images/pfp/tanay.jpeg" alt="Profile Picture">
-                        <span>Tanay</span>
-                    </div>
-                </a>
-                <a href="CtoRICKiNaglANteR.html">
-                    <div class="contact" id="contact3">
-                        <img src="../../images/pfp/group.jpg" alt="Profile Picture">
-                        <span>Mystic Group</span>
-                    </div>
-                </a>
-                <p class="myname">You are <span id="nameDisplay"></span></p>
-                <a href="../../index.html" class="signout">
-                    <p>Sign out</p>
-                </a>
-            </div>
-            <div class="chat-container">
-                <div class="chat-header">
-                    <div class="contact-profile" id="contactProfile">
-                        <img src="../../images/pfp/jaita.jpeg" alt="Profile Picture">
-                        <h1 class="nameuser" onclick="toggleSidebar()">Jaita</h1>
-                        
-                    </div>
+    
+    <div id="loading-screen" class="loading">
+        <img id="image1" src="../../images/logo.png" alt="Image 1">
+        <img id="image2" src="../../images/load.gif" alt="Image 2">
+    </div>
+    <div id="content" style="display: none;">
+    
+    <header> 
+        <div class="user-name"><h1 id="nameDisplay" ></h1></div>
+        <center>
+            <div class="dropdown">
+                
+                <img src="../../images/logo.png" class="logo">
+                <div class="dropdown-content">
+                  <a>Chat</a>
+                  <a href="../../choose-chats.html">Go back</a>
+                  <a href="../../old-chats.html">Old chats</a>
+                  <a href="../../htmlform.html">No CSS</a>
+                  <a href="../../send-image/images.html" target="_blank">Images</a>
                 </div>
-                <div class="messages" id="messages">
-                    <!-- Chat messages will be appended here dynamically -->
-                </div>
-                <form onsubmit="return false;" id="messageForm">
-                    <div id="sendMsg" class="type">
-                        <input type="text" id="msgTxt" placeholder="Message..." class="messagetext">
-                        <input type="submit" id="msgBtn" value="Send" onclick="module.sendMsg()" class="sendbutton" disabled>
-                    </div>
-                </form>
+              </div>
+              <!--reminder-->
+             
+<div id="dim-background"></div>
+
+<div id="randomDiv" class="hidden">
+    <p class="reminder">Please take your vitamins</p>
+    <audio id="music" src="../../reminder.mp3" preload="auto"></audio>
+</div>
+        </center>
+    </header>
+    <div id="chat-container">
+        <div id="messages" >
+            <br><br><br>
+            <div class="encryption-note">
+                <strong>Messages are visible to EVERYONE</strong><br>
+                This means that the messages in the chat are not encrypted. An encryption key doesn't exist in this chat.
             </div>
         </div>
-        <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-        <div class="popup" id="popup">
-            <div class="popup-content">
-                <span class="close-button" onclick="closeSidebar()">&times;</span>
-                <!-- Contacts for selection -->
-                <a href="RsInchALeNeBurCiOnADOXYGMateRANt.html">
-                <div class="contact" id="contact1">
-                    <img src="../../images/pfp/jaita.jpeg" alt="Profile Picture">
-                    <span>Jaita</span>
-                </div>
-                </a>
-                <a href="iEThALvalTRiertiGuELroUsidyDRI.html">
-                <div class="contact" id="contact2">
-                    <img src="../../images/pfp/tanay.jpeg" alt="Profile Picture">
-                    <span>Tanay</span>
-                </div>
-                </a>
-                <a href="CtoRICKiNaglANteR.html">
-                <div class="contact" id="contact2">
-                    <img src="../../images/pfp/group.jpg" alt="Profile Picture">
-                    <span>Mystic Group</span>
-                </div>
-                </a>
-            </div>
+    </div>
+    <br>
+
+
+
+
+
+
+    <form onsubmit="return false;" id="messageForm">
+        <div id="sendMsg" class="type">
+            <input type="text" id="msgTxt" placeholder="Message..." class="messagetext">
+            <input type="submit" id="msgBtn" value="Send" onclick="module.sendMsg()" class="sendbutton" disabled>
         </div>
-        <audio id="sound">
-            <source src="../../notification.mp3" type="audio/mpeg">
-        </audio>
+    </form>
+    <audio id="sound">
+        <source src="../../notification.mp3" type="audio/mpeg">
+    </audio>
+
+    
     <script>
         module = {};
     </script>
@@ -102,14 +97,13 @@
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
  
         const firebaseConfig = {
-        apiKey: "AIzaSyA5w-HTh1kbuOywI1M4bviLWskbro3egNw",
-        authDomain: "ja-chat-c0d8b.firebaseapp.com",
-        databaseURL: "https://ja-chat-c0d8b-default-rtdb.firebaseio.com",
-        projectId: "ja-chat-c0d8b",
-        storageBucket: "ja-chat-c0d8b.appspot.com",
-        messagingSenderId: "79690163887",
-        appId: "1:79690163887:web:04960546a911e0286b565a",
-        measurementId: "G-0JT6YDEXW9"
+            apiKey: "AIzaSyDNPml6XWpfjBhUgzThRt6nRjGd8Mfm0Lg",
+          authDomain: "mystic-chat-9ed3a.firebaseapp.com",
+          projectId: "mystic-chat-9ed3a",
+          storageBucket: "mystic-chat-9ed3a.appspot.com",
+          messagingSenderId: "443059835896",
+          appId: "1:443059835896:web:015c8b16e84c5b6ebdbc0d",
+          measurementId: "G-WHSMTCG093"
         };
       
         // Initialize Firebase
@@ -131,7 +125,7 @@ if (localStorage.getItem('sender')) {
     localStorage.setItem('sender', sender);
 }
 
-// Set the text content of the h1 element to the sender's name
+// Set the text content of the h1 element to the sender's nameeee
 nameDisplay.textContent = sender;
 
 // Add an input event listener to the input field
@@ -166,9 +160,9 @@ module.sendMsg = function sendMsg() {
 // TO RECEIVE MSG
 onChildAdded(ref(db, "messages"), (data) => {
     if (data.val().sender == sender) {
-        messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMsg(" + data.key + ")>X</button></div></div>";
+        messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMs(" + data.key + ")>X</button></div></div>";
     } else {
-        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <div class=nameuser>" + data.val().sender + ":</div><br>" + processMessage(data.val().msg) + "</div></div>";
+        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <b class=nameuser>" + data.val().sender + ":</b><br>" + processMessage(data.val().msg) + "</div></div>";
     }
 
     // Scroll down to the new message
@@ -182,6 +176,7 @@ onChildAdded(ref(db, "messages"), (data) => {
         audio.play();
     }
 });
+
 
 // Function to process messages and identify image and video links
 function processMessage(msg) {
@@ -256,32 +251,17 @@ module.dltMsg = function dltMsg(key){
 
       </script>
       <script>
-        function toggleSidebar() {
-    const overlay = document.getElementById('overlay');
-    const popup = document.getElementById('popup');
-
-    overlay.style.display = 'block';
-    popup.style.display = 'block';
-}
-
-function closeSidebar() {
-    const overlay = document.getElementById('overlay');
-    const popup = document.getElementById('popup');
-
-    overlay.style.display = 'none';
-    popup.style.display = 'none';
-}
-      </script>
-
-<script>
-    document.addEventListener('copy', function (e) {
-        var selectedText = window.getSelection().toString();
-        var formattedText = "<reply>" + selectedText + "</reply> -- ";
-        e.clipboardData.setData('text/html', formattedText);
-        e.clipboardData.setData('text/plain', formattedText);
-        e.preventDefault();
-    });
-</script>
-
+        document.addEventListener('copy', function (e) {
+            var selectedText = window.getSelection().toString();
+            var formattedText = "<reply>" + selectedText + "</reply> -- ";
+            e.clipboardData.setData('text/html', formattedText);
+            e.clipboardData.setData('text/plain', formattedText);
+            e.preventDefault();
+        });
+    </script>
 </body>
+<script src="../../js/loading.js"></script>
+<script src="../../js/reminde.js"></script>
+  <script src="../../js/modal.js"></script>
+  <script src="../../js/call.js"></script>
 </html>
