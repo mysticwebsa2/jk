@@ -198,8 +198,8 @@ function processMessage(msg) {
                 // Check if the URL is a video
                 return `<div class="video-container"><video controls width="320" height="240"><source src="${match}" type="video/mp4"></video></div>`;
             } else {
-                // If it's not an image or video, display the custom message
-                return `<div class="link-container">Sent you a link: <span class="open-link" onclick="openLink('${match}')">OPEN</span></div>`;
+                // If it's not an image or video, display the custom message as a clickable link
+                return `<div class="link-container">Sent you a link: <a href="${match}" target="_blank" rel="noopener noreferrer">OPEN</a></div>`;
             }
         });
     }
@@ -223,7 +223,7 @@ function openLink(url) {
     window.open(url, "_blank");
 }
 
-  
+
 // Scroll down to the bottom of the messages container
 function scrollMessagesToBottom() {
     var messagesContainer = document.getElementById("messages");
@@ -254,7 +254,7 @@ module.dltMsg = function dltMsg(key){
       <script>
         document.addEventListener('copy', function (e) {
             var selectedText = window.getSelection().toString();
-            var formattedText = "<b>" + selectedText + "</b> -- ";
+            var formattedText = "<reply>" + selectedText + "</reply> -- ";
             e.clipboardData.setData('text/html', formattedText);
             e.clipboardData.setData('text/plain', formattedText);
             e.preventDefault();
