@@ -175,51 +175,21 @@ onChildAdded(ref(db, "messages"), (data) => {
     }
 });
 
-// Function to process messages and identify image and video links
+// Function to process messages and identify image links
 function processMessage(msg) {
     // Regular expression to check if the message contains a valid URL
     const urlRegex = /(https?:\/\/[^\s]+)/g;
 
     // Check if the message contains a valid URL
     if (urlRegex.test(msg)) {
-        // Replace the URL with an image or video preview
+        // Replace the URL with an image tag for any image link
         msg = msg.replace(urlRegex, (match) => {
-            // Check if the URL is from Firebase Storage
-            if (match.includes("https://firebasestorage.googleapis.com")) {
-                return `<div class="media-container" data-url="${match}"><h1 class="media">Media: Tap to show</h1></div>`;
-            } else if (/\.(jpeg|jpg|gif|png)$/.test(match.toLowerCase())) {
-                // Check if the URL is an image
-                return `<div class="image-container"><img src="${match}" alt="Image"></div>`;
-            } else if (/\.(mp4|ogg|webm)$/.test(match.toLowerCase())) {
-                // Check if the URL is a video
-                return `<div class="video-container"><video controls width="320" height="240"><source src="${match}" type="video/mp4"></video></div>`;
-            } else {
-                // If it's not an image or video, display the custom message as a clickable link
-                return `<div class="link-container">Sent you a link: <a href="${match}" target="_blank" rel="noopener noreferrer">OPEN</a></div>`;
-            }
+            return `<div class="image-container"><img src="${match}" alt="Image"></div>`;
         });
     }
 
     return msg;
 }
-
-// Set up event listeners for media containers
-document.addEventListener("click", function(event) {
-    const mediaContainer = event.target.closest(".media-container");
-    if (mediaContainer) {
-        const url = mediaContainer.getAttribute("data-url");
-        if (url) {
-            openLink(url);
-        }
-    }
-});
-
-// Function to open the link in a new tab
-function openLink(url) {
-    window.open(url, "_blank");
-}
-
-
 // Scroll down to the bottom of the messages container
 function scrollMessagesToBottom() {
     var messagesContainer = document.getElementById("messages");

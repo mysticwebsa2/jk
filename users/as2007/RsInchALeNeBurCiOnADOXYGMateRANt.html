@@ -174,6 +174,15 @@ onChildAdded(ref(db, "messages"), (data) => {
     // Scroll down to the new message
     scrollMessagesToBottom();
 
+    // Check if #inner has been added
+    const innerElement = document.getElementById("inner");
+    if (innerElement) {
+        // Play the sound
+        const audio = document.getElementById("sound");
+        audio.play();
+    }
+});
+
 // Function to process messages and identify image and video links
 function processMessage(msg) {
     // Regular expression to check if the message contains a valid URL
@@ -193,8 +202,8 @@ function processMessage(msg) {
                 // Check if the URL is a video
                 return `<div class="video-container"><video controls width="320" height="240"><source src="${match}" type="video/mp4"></video></div>`;
             } else {
-                // If it's not an image or video, display the custom message as a clickable link
-                return `<div class="link-container">Sent you a link: <a href="${match}" target="_blank" rel="noopener noreferrer">OPEN</a></div>`;
+                // If it's not an image or video, display the custom message
+                return `<div class="link-container">Sent you a link: <span class="open-link" onclick="openLink('${match}')">OPEN</span></div>`;
             }
         });
     }
@@ -217,7 +226,6 @@ document.addEventListener("click", function(event) {
 function openLink(url) {
     window.open(url, "_blank");
 }
-
 
 
 // Scroll down to the bottom of the messages container
