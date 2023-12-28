@@ -45,6 +45,7 @@ reply {
 .logo {
     width: 120px;
     transition: 0.25s;
+    filter: hue-rotate(306deg);
 }
 .logo:hover {
     width: 120px;
@@ -146,8 +147,7 @@ reply {
     
 }
 .me{
-    background: rgb(101,75,140);
-    background: linear-gradient(257deg, rgba(101,75,140,1) 0%, rgba(150,86,121,1) 100%);
+    background-color: #c49f54;
     color:#fff;
     max-width: 80%;
     font-size: 18px;
@@ -177,7 +177,7 @@ reply {
     margin-left: 30px;
     margin-top: 5px;
     font-size: 8px;
-    background-color: #ff0000;
+    background-color: #222222;
     border-color: transparent;
     color: #fff;
     transition: 0.15s;
