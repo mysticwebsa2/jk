@@ -137,6 +137,7 @@ reply {
     animation: fadeIn 0.22s;
 }
 #inner{
+    background-color: #c49f54
     max-width: 80%;
     font-size: 18px;
     padding:11px;
