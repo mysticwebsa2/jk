@@ -137,7 +137,6 @@ reply {
     animation: fadeIn 0.22s;
 }
 #inner{
-    background: #c49f54;
     max-width: 80%;
     font-size: 18px;
     padding:11px;
@@ -148,7 +147,8 @@ reply {
     
 }
 .me{
-    background: #c49f54;
+    background: rgb(101,75,140);
+    background: linear-gradient(257deg, rgba(101,75,140,1) 0%, rgba(150,86,121,1) 100%);
     color:#fff;
     max-width: 80%;
     font-size: 18px;
