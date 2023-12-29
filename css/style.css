@@ -45,7 +45,6 @@ reply {
 .logo {
     width: 120px;
     transition: 0.25s;
-    filter: hue-rotate(306deg);
 }
 .logo:hover {
     width: 120px;
