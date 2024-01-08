@@ -386,8 +386,6 @@ reply {
         font-size: 14px;
     }
     .me{
-        background: rgb(101,75,140);
-        background: linear-gradient(257deg, rgba(101,75,140,1) 0%, rgba(150,86,121,1) 100%);
         color:#fff;
         max-width: 80%;
         font-size: 14px;
