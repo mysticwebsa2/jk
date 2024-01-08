@@ -79,14 +79,14 @@
 
     <form onsubmit="return false;" id="messageForm">
         <div id="sendMsg" class="type">
-            <input type="text" id="msgTxt" placeholder="HAPPY BIRTHDAY JAITA 🎂" class="messagetext">
+            <input type="text" id="msgTxt" placeholder="Message aravind..." class="messagetext">
             <input type="submit" id="msgBtn" value="Send" onclick="module.sendMsg()" class="sendbutton" disabled>
         </div>
     </form>
     <audio id="sound">
         <source src="../../notification.mp3" type="audio/mpeg">
     </audio>
-
+    
     
     <script>
         module = {};
@@ -161,9 +161,9 @@ module.sendMsg = function sendMsg() {
 // TO RECEIVE MSG
 onChildAdded(ref(db, "messages"), (data) => {
     if (data.val().sender == sender) {
-        messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMs(" + data.key + ")>X</button></div></div>";
+        messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMsg(" + data.key + ")>X</button></div></div>";
     } else {
-        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <b class=nameuser>" + data.val().sender + ":</b><br>" + processMessage(data.val().msg) + "</div></div>";
+        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe><br><div class=textbubble-notme>" + processMessage(data.val().msg) + "</div></div></div>";
     }
 
     // Scroll down to the new message
@@ -177,7 +177,6 @@ onChildAdded(ref(db, "messages"), (data) => {
         audio.play();
     }
 });
-
 
 // Function to process messages and identify image and video links
 function processMessage(msg) {

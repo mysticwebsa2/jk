@@ -296,7 +296,9 @@ div.contact span {
     border-radius: 10px;
 }
 
-
+.textbubble-notme {
+    margin-top: -20px;
+}
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
     .sidebar {

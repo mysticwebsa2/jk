@@ -45,7 +45,6 @@ reply {
 .logo {
     width: 120px;
     transition: 0.25s;
-    filter: hue-rotate(306deg);
 }
 .logo:hover {
     width: 120px;
@@ -147,7 +146,8 @@ reply {
     
 }
 .me{
-    background-color: #c49f54;
+    background: rgb(101,75,140);
+    background: linear-gradient(257deg, rgba(101,75,140,1) 0%, rgba(150,86,121,1) 100%);
     color:#fff;
     max-width: 80%;
     font-size: 18px;
@@ -171,6 +171,9 @@ reply {
     animation: slideIn 0.22s;
 }
 
+.textbubble-notme {
+    margin-top: -20px;
+}
 #dltMsg {
     border-radius: 50px;
     float: right;

@@ -26,7 +26,7 @@
                 <a href="RsInchALeNeBurCiOnADOXYGMateRANt.html">
                     <div class="contact" id="contact1" style="background-color: #766ac8;">
                         <img src="../../images/pfp/jaita.jpeg" alt="Profile Picture">
-                        <span>Jaita</span>
+                        <span>Ma BSF</span>
                     </div>
                 </a>
                 <a href="iEThALvalTRiertiGuELroUsidyDRI.html">
@@ -50,7 +50,7 @@
                 <div class="chat-header">
                     <div class="contact-profile" id="contactProfile">
                         <img src="../../images/pfp/jaita.jpeg" alt="Profile Picture">
-                        <h1 class="nameuser" onclick="toggleSidebar()">Jaita</h1>
+                        <h1 class="nameuser" onclick="toggleSidebar()">Ma BSF</h1>
                         
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 </div>
                 <form onsubmit="return false;" id="messageForm">
                     <div id="sendMsg" class="type">
-                        <input type="text" id="msgTxt" placeholder="Message..." class="messagetext">
+                        <input type="text" id="msgTxt" placeholder="Message jaita" class="messagetext">
                         <input type="submit" id="msgBtn" value="Send" onclick="module.sendMsg()" class="sendbutton" disabled>
                     </div>
                 </form>
@@ -168,7 +168,7 @@ onChildAdded(ref(db, "messages"), (data) => {
     if (data.val().sender == sender) {
         messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>" + processMessage(data.val().msg) + "<button id=dltMsg onclick=module.dltMsg(" + data.key + ")>X</button></div></div>";
     } else {
-        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe> <div class=nameuser>" + data.val().sender + ":</div><br>" + processMessage(data.val().msg) + "</div></div>";
+        messages.innerHTML += "<div class=outer id=" + data.key + "><div class=notMe><br><div class=textbubble-notme>" + processMessage(data.val().msg) + "</div></div></div>";
     }
 
     // Scroll down to the new message
