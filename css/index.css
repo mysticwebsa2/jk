@@ -319,15 +319,15 @@ div.contact span {
 
 @media screen and (max-width: 375px) {
     .me{
-        font-size: 15px;
+        font-size: 16px;
         
          
     }
     .notMe{
-        font-size: 15px;
+        font-size: 16px;
     }
     #inner {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
