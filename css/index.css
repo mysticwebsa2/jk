@@ -316,3 +316,19 @@ div.contact span {
         max-width: 300px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .me{
+        font-size: 15px;
+        
+         
+    }
+    .notMe{
+        font-size: 15px;
+    }
+    #inner {
+        font-size: 15px;
+    }
+}
+
+
